@@ -12,7 +12,8 @@ const freelancers = [
     { name: "Francisco Franco", job: "Desarrollador Back end", image: "https://mighty.tools/mockmind-api/content/human/7.jpg", rating: 4.1 },
     { name: "Victoria Salas", job: "Desarrollador Front end", image: "https://mighty.tools/mockmind-api/content/human/49.jpg", rating: 4.6 },
     { name: "Mercedes Zulbarán", job: "Asesorías financieras", image: "https://mighty.tools/mockmind-api/content/human/43.jpg", rating: 4.9 },
-    { name: "Miguel Martínez", job: "Docente de matemática", image: "https://mighty.tools/mockmind-api/content/human/72.jpg", rating: 4.0 }
+    { name: "Miguel Martínez", job: "Docente de matemática", image: "https://mighty.tools/mockmind-api/content/human/72.jpg", rating: 4.0 },
+    { name: "Samara Richards", job: "Entrenadora personal", image: "https://mighty.tools/mockmind-api/content/human/55.jpg", rating: 4.0 }
 ];
 
 // Mostrar freelancers destacados en la página
