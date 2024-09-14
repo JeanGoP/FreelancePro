@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Servicios Freelance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">FreelancePro</div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#" id="profile-link" style="display: none;" onclick="mostrarCrearPerfil()">Mi Perfil</a></li>
+        <li><a href="#" id="login-link" onclick="mostrarFormularioLogin()">Iniciar Sesión</a></li>
+        <li><a href="#" id="logout-link" style="display: none;" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+        <li><a href="#" onclick="mostrarFormularioRegistro()">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Encuentra al Profesional que Necesitas</h1>
+    <p>Conecta con los mejores freelancers de todas las áreas</p>
+    <div class="buscar">
+      <input type="text" id="search-input" placeholder="¿Qué servicio necesitas?">
+      <button onclick="buscarFreelancers()">Buscar</button>
+    </div>
+  </section>
+
+  <!-- Formulario de inicio de sesión -->
+<section id="login-form" style="display: none;">
+  <h2 class="titulo-form">Iniciar Sesión</h2>
+  <div class="login-container">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" placeholder="Ingresa tu usuario">
+    
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" placeholder="Ingresa tu contraseña">
+    
+    <button onclick="iniciarSesion()">Ingresar</button>
+    <p id="login-error" style="color: red; display: none;">Credenciales incorrectas</p>
+  </div>
+</section>
+
+  <!-- Formulario de registro -->
+<section id="registro-form" style="display: none;">
+  <h2 class="titulo-form">Registro</h2>
+  <div class="login-container">
+    <label for="reg-username">Usuario:</label>
+    <input type="text" id="reg-username" placeholder="Ingresa tu usuario">
+    
+    <label for="reg-password">Contraseña:</label>
+    <input type="password" id="reg-password" placeholder="Ingresa tu contraseña">
+
+    <label for="role">Rol:</label>
+    <select id="role">
+      <option value="cliente">Cliente</option>
+      <option value="freelancer">Freelancer</option>
+    </select>
+    
+    <button onclick="registrarse()">Registrarse</button>
+    <p id="registro-error" style="color: red; display: none;">Error al registrar</p>
+  </div>
+</section>
+
+<!-- Formulario para crear perfil de freelancer -->
+<section id="crear-perfil" style="display: none;">
+  <h2 class="titulo-form">Crear Perfil de Freelancer</h2>
+  <div class="login-container">
+    <label for="freelancer-name">Nombre:</label>
+    <input type="text" id="freelancer-name" placeholder="Ingresa tu nombre">
+
+    <label for="freelancer-job">Profesión:</label>
+    <input type="text" id="freelancer-job" placeholder="Ingresa tu profesión">
+
+    <label for="freelancer-image">URL de la imagen:</label>
+    <input type="text" id="freelancer-image" placeholder="Ingresa un enlace de imagen">
+
+    <button onclick="guardarPerfilFreelancer()">Guardar Perfil</button>
+    <p id="perfil-guardado" style="color: green; display: none;">Perfil guardado exitosamente</p>
+  </div>
+</section>
+
+
+  <!-- Lista de freelancers -->
+  <section id="freelancer-lista" class="freelancer-lista">
+    <h2>Freelancers Destacados</h2>
+    <div id="freelancers" class="grid-container">
+      <!-- Tarjetas de freelancers generadas dinámicamente -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 FreelancePro. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
