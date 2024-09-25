@@ -1,0 +1,66 @@
+Primer borrador
+ 
+1. Contextualización del proyecto
+Estado del arte: 1.1 antecedentes; 1.2 estado del arte
+2. Describir el problema
+Lista de inconvenientes que se presentan o son palpables en los antecedentes
+3. Plantear unos objetivos específicos
+Elabora una lista, mostrando un objetivo por cada inconveniente
+4. Justificación
+Resaltar la importancia de nuestro proyecto
+5. Metodología
+Cronograma de actividad
+Elaborar un presupuesto
+6. Desarrollo del aplicativo
+
+Contextualización del proyecto
+
+Estado del arte: 1.1 antecedentes; 1.2 estado del arte
+
+Descripción el problema
+
+Lista (viñetas) de inconvenientes que se presentan o son palpables en los antecedentes
+
+Plantear unos objetivos específicos
+
+Elabora una lista, mostrando un objetivo por cada inconveniente
+
+Justificación
+
+Resaltar la importancia de nuestro proyecto
+
+Metodología
+
+Cronograma de actividad
+
+Elaborar un presupuesto
+
+Alternativas de solución
+
+
+
+Alternativa No. 1:
+
+              Propuesta técnica: Plataforma de desarrollo (hardware y software)
+
+              Presupuesto:
+
+Alternativa No. 2:
+
+              Propuesta técnica:
+
+              Presupuesto:
+
+Alternativa No. 3:
+
+              Propuesta técnica:
+
+              Presupuesto:
+
+
+
+Alternativa Recomendada: Alternativa No. X ¿y por qué?
+
+
+
+Desarrollo del aplicativo web (Ingeniería de Software)
