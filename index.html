@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plataforma de Servicios Freelance</title>
+  <link rel="icon" href="./Logo/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -91,6 +92,20 @@
       <!-- Tarjetas de freelancers generadas dinámicamente -->
     </div>
   </section>
+
+
+  <!-- Pop-up para enviar mensaje al freelancer -->
+  <div id="popup-form" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarPopup()">&times;</span>
+      <h2>Enviar Mensaje a <strong id="freelancer-nombre"></strong></h2>
+      <label for="mensaje">Explícale tu problema:</label>
+      <textarea id="mensaje" rows="5" placeholder="Describe tu necesidad..."></textarea>
+      <p>Cliente: <strong id="cliente-nombre"></strong></p>
+      <button onclick="enviarMensaje()">Enviar</button>
+    </div>
+  </div>
+
 
   <footer>
     <p>© 2024 FreelancePro. Todos los derechos reservados.</p>

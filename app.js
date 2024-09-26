@@ -21,11 +21,9 @@ const freelancers = [
 // Mostrar freelancers destacados en la página
 function mostrarFreelancers() {
   const freelancerContainer = document.getElementById('freelancers');
-  freelancerContainer.innerHTML = '';
-  
-  for (let i = 0; i < freelancers.length; i++) {
-    const freelancer = freelancers[i];
-    if (freelancer.rating > 4.2){
+  freelancerContainer.innerHTML = ''; // Limpiar el contenedor
+
+  freelancers.forEach(freelancer => {
     const card = `
       <div class="freelancer-card">
         <img src="${freelancer.image}" alt="${freelancer.name}">
@@ -35,8 +33,10 @@ function mostrarFreelancers() {
       </div>
     `;
     freelancerContainer.innerHTML += card;
-  }
-}
+  });
+
+  // Asignar eventos de clic a los freelancers una vez que se carguen las tarjetas
+  asignarEventosFreelancers();
 }
 
 // Función para mostrar el formulario de inicio de sesión
@@ -169,6 +169,56 @@ function buscarFreelancers() {
     freelancerContainer.innerHTML = '<p>No se encontraron freelancers con esa profesión.</p>';
   }
 }
+
+// Variable global para guardar el cliente logueado
+let clienteActivo = null;
+
+// Función para mostrar el pop-up con el nombre del freelancer y del cliente
+function mostrarPopupFreelancer(freelancerName) {
+  const popup = document.getElementById('popup-form');
+  const freelancerNombre = document.getElementById('freelancer-nombre');
+  const clienteNombre = document.getElementById('cliente-nombre');
+  
+  // Establecer los nombres en el formulario
+  freelancerNombre.textContent = freelancerName;
+  clienteNombre.textContent = clienteActivo?.username || 'Cliente';  // Nombre del cliente logueado
+  
+  // Mostrar el pop-up
+  popup.style.display = 'block';
+}
+
+// Función para cerrar el pop-up
+function cerrarPopup() {
+  document.getElementById('popup-form').style.display = 'none';
+}
+
+// Función para enviar el mensaje de prueba
+function enviarMensaje() {
+  const mensaje = document.getElementById('mensaje').value;
+  if (mensaje.trim()) {
+    alert("Mensaje enviado: " + mensaje);
+    cerrarPopup();
+  } else {
+    alert("Por favor, escribe un mensaje.");
+  }
+}
+
+// Función para asignar eventos de clic a los freelancers visibles
+function asignarEventosFreelancers() {
+  const freelancerCards = document.querySelectorAll('.freelancer-card');
+  
+  freelancerCards.forEach(card => {
+    card.addEventListener('click', function() {
+      const freelancerName = card.querySelector('h3').textContent; // Obtener el nombre del freelancer
+      mostrarPopupFreelancer(freelancerName);
+    });
+  });
+}
+
+
+
+
+
 
 
 // Inicialización
