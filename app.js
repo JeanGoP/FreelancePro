@@ -24,6 +24,7 @@ let usuarios = [
     freelancerContainer.innerHTML = ''; // Limpiar el contenedor
   
     freelancers.forEach(freelancer => {
+      if (freelancer.rating >= 4.3){
       const card = `
         <div class="freelancer-card">
           <img src="${freelancer.image}" alt="${freelancer.name}">
@@ -33,6 +34,7 @@ let usuarios = [
         </div>
       `;
       freelancerContainer.innerHTML += card;
+    }
     });
   
     // Asignar eventos de clic a los freelancers una vez que se carguen las tarjetas
@@ -214,12 +216,6 @@ let usuarios = [
       });
     });
   }
-  
-  
-  
-  
-  
-  
   
   // Inicialización
   window.onload = function() {
