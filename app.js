@@ -201,6 +201,7 @@ function cerrarPopup() {
   const mensaje = document.getElementById('mensaje').value;
   if (mensaje.trim()) {
     alert("Mensaje enviado: " + mensaje);
+      document.getElementById('mensaje').value = ''; // Limpiar el área de texto
     cerrarPopup();
   } else {
     alert("Por favor, escribe un mensaje.");
